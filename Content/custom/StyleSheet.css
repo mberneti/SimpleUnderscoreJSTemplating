@@ -1,0 +1,7 @@
+﻿.media {
+    border: 1px solid gray;
+    -ms-border-radius:5px;
+    border-radius:5px;
+    padding: 10px;
+    float: left;
+}

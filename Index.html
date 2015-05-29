@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>underscore.js templating</title>
+    <link href="Content/libs/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/custom/StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <h3>comments list</h3>
+        <div id="DataPlaceHolder">
+            <!-- comments place here -->
+        </div>
+    </div>
+
+    <footer class="container text-center">
+        <a href="http://skydevelop.ir">© SkyDevelop.ir</a>
+    </footer>
+    <script src="Content/libs/jquery-1.10.2.min.js"></script>
+    <script src="Content/libs/bootstrap.min.js"></script>
+    <script src="Content/libs/underscore-min.js"></script>
+    <script src="Content/custom/JavaScript.js"></script>
+    <script id="comment-template" type="text/template">
+        <% _.each(items,function(item) { %>
+        <div class="media">
+            <div class="media-body">
+                <p class="media-heading">
+                    <b><%= item.Fullname %></b><small> (<%= item.Date %>)</small>
+                </p>
+                <%= item.Comment %>
+            </div>
+        </div>
+        <% });%>
+    </script>
+</body>
+</html>
